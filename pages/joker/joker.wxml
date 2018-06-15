@@ -1,0 +1,15 @@
+<!--pages/joker/joker.wxml-->
+
+
+
+ <block wx:for="{{jokerList}}">
+  <view class='jokerItem' bindlongtap='itemClick' data-content='{{item.content}}'>
+    <view class='jokerContent'>{{item.content}}</view>
+    <view class='jokerTime'>{{item.unixtime}}</view>
+  </view>
+</block>   
+<!-- 
+<view class='jokerItem' bindtap='itemClick'>
+  <view class='jokerContent'>{{content}}</view>
+  <view class='jokerTime'>{{time}}</view>
+</view> -->

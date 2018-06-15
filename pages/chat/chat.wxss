@@ -1,0 +1,123 @@
+/* pages/chat/chat.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0px;
+}
+
+.chat-scroll {
+  height: 460px;
+}
+
+/*  发送  */
+
+.receive-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.receive-item-img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.receive-item-text {
+  max-width: 80%;
+}
+
+/*  接收  */
+
+.send-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.send-item-img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+
+.send-item-text {
+  max-width: 80%;
+}
+
+/* 底部  */
+
+.chat-bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 8%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-input {
+  width: 70%;
+  height: 65%;
+  padding-left: 20rpx;
+  margin-left: 35rpx;
+  background-color: #efeff4;
+  border-radius: 5px;
+}
+
+.expression {
+  min-width: 20rpx;
+  max-width: 500rpx;
+  height: auto;
+  min-height: 100rpx;
+  margin: 100px auto;
+  background-color: green;
+  border-bottom-color: green; /*为了给after伪元素自动继承*/
+  color: #fff;
+  font-size: 12px;
+  font-family: Arial;
+  line-height: 18px;
+  padding: 5px 12px 5px 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+  word-break: break-all;
+}
+
+.expression::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+  left: -10px; /*向左侧外部延伸箭头box的一半宽度*/
+  position: absolute;
+  transform: rotate(45deg); /*旋转45度*/
+  top: 50%; /*箭头在数值方向上居中*/
+  margin-top: -5px;
+}
+
+.expression::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  right: -24px;
+  top: 0px;
+  border-width: 0 0 20px 20px;
+  border-style: solid;
+  border-left-color: transparent;
+  border-bottom-color: inherit;
+  border-bottom-right-radius: 60px;
+}

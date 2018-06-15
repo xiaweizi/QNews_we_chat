@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.status-box {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.status-box .status-label {
+  width: 150rpx;
+  height: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #353535;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.status-box .status-label.active {
+  color: #e64340;
+  border-bottom: 6rpx solid #e64340;
+}
+
+.status-box .status-label .red-dot {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  left: 116rpx;
+  top: 23rpx;
+  background-color: #f43530;
+  border-radius: 50%;
+}
+
+.no-order {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 203rpx;
+  background-color: #f2f2f2;
+}
+
+.no-order-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 31rpx;
+}
+
+.no-order .text {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+}
+
+.order-list {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.a-order {
+  width: 94%;
+  height: 240rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  margin-left: 3%;
+  border-radius: 5px;
+  box-shadow: 4rpx 6rpx 6rpx 4rpx rgba(0,0,0,0.15);
+}
+
+.order-list .a-order .order-date {
+  padding: 0 30rpx;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #000;
+  align-items: center;
+}
+
+.order-list .a-order .order-date .red {
+  font-size: 26rpx;
+  color: #e64340;
+}
+
+.news-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.news-item-content {
+  width: 60%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.news-item-content-title {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: #23354b;
+  font-size: 40rpx;
+}
+
+.news-item-content-bootom {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  color: #7c838a;
+}
+
+.news-item image {
+  width: 40%;
+  height: 88%;
+  margin-right: 26rpx;
+  border-radius: 15rpx;
+}

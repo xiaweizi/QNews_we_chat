@@ -1,0 +1,36 @@
+/* pages/history/history.wxss */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0rpx;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  width: 42%;
+  display: flex;
+  padding-top: 20rpx;
+  padding-right: 16rpx;
+  padding-bottom: 18rpx;
+  padding-left: 20rpx;
+  flex-direction: column;
+  background: white;
+  margin: 10rpx;
+  border-radius: 5%;
+  box-shadow: 4rpx 6rpx 6rpx 4rpx rgba(0, 0, 0, 0.15);
+}
+
+.item-title {
+  font-size: 35rpx;
+  color: #23354b;
+}
+
+.item-time {
+  margin-top: 20rpx;
+  text-align: right;
+  font-size: 25rpx;
+  color: #7c838a;
+}

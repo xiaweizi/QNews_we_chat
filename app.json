@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/news/news",
+    "pages/joker/joker",
+    "pages/test/test",
+    "pages/chat/chat",
+    "pages/history/history",
+    "pages/historyDetail/historyDetail",
+    "pages/newsDetail/newsDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#2196f3",
+    "navigationBarTitleText": "趣闻",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "selectedColor": "#2196f3",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻",
+        "iconPath": "images/news2.png",
+        "selectedIconPath": "images/news1.png"
+      },
+      {
+        "pagePath": "pages/joker/joker",
+        "text": "段子",
+        "iconPath": "images/joker2.png",
+        "selectedIconPath": "images/joker1.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史今天",
+        "iconPath": "images/today2.png",
+        "selectedIconPath": "images/today1.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "小爱",
+        "iconPath": "images/girl2.png",
+        "selectedIconPath": "images/girl1.png"
+      }
+    ]
+  }
+}

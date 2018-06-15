@@ -1,0 +1,8 @@
+<!--pages/history/history.wxml-->
+
+ <view class='container'>
+  <view class='item' wx:for="{{todayList}}" bindtap='itemClick' data-e_id='{{item.e_id}}'>
+    <text class='item-title'>{{item.title}}</text>
+    <text class='item-time'>{{item.date}}</text>
+  </view>
+</view> 

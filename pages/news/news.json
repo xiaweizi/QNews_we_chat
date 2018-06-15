@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新闻",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#00bcd4",
+  "component": true,
+  "usingComponents": {
+    "slideTab": "../../components/navigator/index"
+  }
+}

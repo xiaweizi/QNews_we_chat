@@ -1,0 +1,11 @@
+/**app.wxss**/
+/* 全局样式，对每一个页面都启作用  */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

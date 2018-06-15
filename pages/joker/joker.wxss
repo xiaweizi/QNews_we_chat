@@ -1,0 +1,26 @@
+/* pages/joker/joker.wxss */
+
+.jokerItem {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20rpx;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 4rpx 6rpx 6rpx 4rpx rgba(0,0,0,0.15);
+}
+
+.jokerContent{
+  margin: 35rpx;
+  color: #23354b;
+  font-size: 35rpx;
+}
+
+.jokerTime{
+  position: relative;
+  align-self: flex-end;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #7c838a;
+}

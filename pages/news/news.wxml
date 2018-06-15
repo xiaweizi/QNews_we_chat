@@ -1,0 +1,41 @@
+<view>
+  <slideTab tList="{{statusType}}" bind:changeCurrent="swichNav" currentTab="{{currentType}}">
+    <swiper current="{{currentType}}" duration="300" bindchange="bindChange" style="height: {{windowHeight-35}}px;margin-top:35px;">
+      <block>
+        <swiper-item wx:for="{{list}}">
+          <view class="no-order" hidden="{{item ? true : false}}">
+            <image src="../../images/empty.png" class="no-order-img"></image>
+            <view class="text">暂无数据</view>
+          </view>
+
+          <scroll-view scroll-y="true" class="order-list" scroll-with-animation="true" lower-threshold="1" bindscrolltolower="scrolltolower" style="height: {{windowHeight-35}}px;" hidden="{{item ? flase : true}}">
+
+            <view class="a-order" wx:for="{{item}}" wx:key="childIndex" wx:for-item="childItem" bindtap='itemClick' data-data='{{childItem}}'>
+
+              <view class='news-item'>
+
+                <view class='news-item-content'>
+                  <text class='news-item-content-title'>{{childItem.title}}</text>
+                  <text class='news-item-content-bootom'>{{childItem.author_name}}  {{childItem.date}}</text>
+                </view>
+
+                <image src='{{childItem.thumbnail_pic_s}}'></image>
+<!-- 
+                <view class='news-item-content'>
+                  <text class='news-item-content-title'>gaga</text>
+                  <text class='news-item-content-bootom'>gagaga</text>
+                </view>
+
+                <image src='../../images/empty.png'></image> -->
+
+              </view>
+
+            </view>
+
+          </scroll-view>
+
+        </swiper-item>
+      </block>
+    </swiper>
+  </slideTab>
+</view>

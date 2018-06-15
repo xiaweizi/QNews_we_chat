@@ -1,0 +1,52 @@
+/* pages/historyDetail/historyDetail.wxss */
+
+.parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-swiper {
+  width: 100%;
+  height: 450rpx;
+}
+
+.history-title {
+  margin-top: 40rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-size: 50rpx;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.detail-content {
+  padding: 40rpx;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 3px;
+  margin-bottom: 50rpx;
+  box-shadow: 4rpx 6rpx 6rpx 4rpx rgba(0, 0, 0, 0.15);
+  color: #23354b;
+  font-size: 35rpx;
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-item-text {
+  position: absolute;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 60rpx;
+  text-align: left;
+  padding-left: 40rpx;
+  color: white;
+}

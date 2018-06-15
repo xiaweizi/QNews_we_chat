@@ -1,0 +1,30 @@
+<!--pages/chat/chat.wxml-->
+
+<view class='container'>
+  <scroll-view scroll-y class='chat-scroll' scroll-into-view="{{toView}}" scroll-with='true'>
+    <block wx:for="{{chatList}}">
+      <view id='view{{index}}'>
+        <template is="{{item.isSend? 'sendItem' : 'receiveItem'}}" data="{{...item}}" />
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class='chat-bottom'>
+  <input maxlength='30'  confirm-type='send' confirm-hold='true' placeholder='请输入聊天内容' bindinput='chatInputListener' class='chat-input' value='{{inputContent}}' bindconfirm='chatConfirm'></input>
+  <button class='chat-send' type='primary' size='mini' bindtap='sendClick' disabled='{{sendDisable}}' loading='{{sendLoading}}'>发送</button>
+</view>
+
+<template name="sendItem">
+  <view class='send-item'>
+    <text class='send-item-text'> {{content}} </text>
+    <image src='../../images/send.jpg' class='send-item-img'></image>
+  </view>
+</template>
+
+<template name="receiveItem">
+  <view class='receive-item'>
+    <image src='../../images/receiver.jpg' class='receive-item-img'></image>
+    <text class='receive-item-text'> {{content}} </text>
+  </view>
+</template>
