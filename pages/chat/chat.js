@@ -1,5 +1,6 @@
 // pages/chat/chat.js
 const TAG = 'chat'
+const MSG_KEY = 'msg_key'
 var app = getApp()
 
 Page({
@@ -8,15 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    chatList: [{
-      content: '小爱小爱',
-      isSend: true
-    },
-    {
-      content: '我在~',
-      isSend: false
-    }
-    ],
+    chatList: [],
     inputContent: '',
     sendDisable: true,
     sendLoading: false,
@@ -44,6 +37,30 @@ Page({
    */
   onReady: function () {
 
+    // 这里主要对缓存数据进行判断
+    var that = this;
+    wx.getStorage({
+      key: MSG_KEY,
+      success: function(res) {
+        let data = JSON.parse(res.data)
+        that.setData({
+          chatList: data,
+          toView: 'view' + (data.length - 1)
+        })
+      },
+    })
+
+    wx.getStorageInfo({
+      success: function(res) {
+        let currentSize = res.currentSize
+        let limitSize = res.limitSize
+        if (currentSize >= limitSize - 100) {
+          wx.removeStorage({
+            key: MSG_KEY
+          })
+        }
+      },
+    })
   },
 
   /**
@@ -57,7 +74,11 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    var that = this
+    wx.setStorage({
+      key: MSG_KEY,
+      data: JSON.stringify(that.data.chatList),
+    })
   },
 
   /**
